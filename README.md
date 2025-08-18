@@ -1,28 +1,28 @@
 ```mermaid
 flowchart TD
 
-    %% 입력 단계
-    A[생산라인 카메라] --> B[Edge Gateway GPU/TPU 서버]
+    %% Input stage
+    A[Production Line Camera] --> B[Edge Gateway GPU/TPU Server]
 
     %% Edge Inference
-    B --> C[AutoML Vision 모델 Vertex AI Edge 배포]
-    C --> D[실시간 불량 검출 ms 단위 응답]
+    B --> C[AutoML Vision Model Vertex AI Edge Deployment]
+    C --> D[Real-time Defect Detection ms-level Response]
 
-    %% Edge 처리 결과
-    D --> E1[현장 알람/PLC 제어 불량품 제거]
-    D --> E2[로컬 로그 DB 저장]
+    %% Edge Processing Results
+    D --> E1[On-site Alarm/PLC Control Defective Item Removal]
+    D --> E2[Local Log DB Storage]
 
-    %% 클라우드 연동
+    %% Cloud Integration
     E2 --> F[Google Cloud IoT Core / PubSub]
     F --> G[Vertex AI Monitoring / Dify Workflow]
 
-    %% 팀 협업
-    G --> H1[품질 관리자 대시보드]
-    G --> H2[리포트 자동 생성]
-    G --> H3[Teams/Slack 알림]
+    %% Team Collaboration
+    G --> H1[Quality Manager Dashboard]
+    G --> H2[Automated Report Generation]
+    G --> H3[Teams/Slack Notifications]
 
-    %% 그룹화
-    subgraph Edge["공장 내부 On-Premise"]
+    %% Grouping
+    subgraph Edge["Factory Floor On-Premise"]
         A --> B --> C --> D
         D --> E1
         D --> E2
