@@ -1,5 +1,5 @@
 ```mermaid
 flowchart TD
-    A[Camera] --> B[Edge Gateway]
-    B --> C[Model]
-    C --> D[Inspection]
+    A[생산라인 카메라] --> B[Edge Gateway (GPU/TPU 서버)]
+    B --> C[AutoML Vision 모델]
+    C --> D[실시간 불량 검출]
