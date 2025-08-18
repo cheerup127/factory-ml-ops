@@ -1,3 +1,6 @@
+```mermaid
+flowchart TD
+
     %% 입력 단계
     A[📷 생산라인 카메라] --> B[💻 Edge Gateway<br/>(GPU/TPU 서버)]
 
