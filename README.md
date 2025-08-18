@@ -2,14 +2,14 @@
 flowchart TD
 
     %% 입력 단계
-    A[📷 생산라인 카메라] --> B[💻 Edge Gateway<br/>(GPU/TPU 서버)]
+    A[📷 생산라인 카메라] --> B[💻 Edge Gateway\n(GPU/TPU 서버)]
 
     %% Edge Inference
-    B --> C[🧠 AutoML Vision 모델<br/>(Vertex AI Edge 배포)]
-    C --> D[⚡ 실시간 불량 검출<br/>(ms 단위 응답)]
+    B --> C[🧠 AutoML Vision 모델\n(Vertex AI Edge 배포)]
+    C --> D[⚡ 실시간 불량 검출\n(ms 단위 응답)]
 
     %% Edge 처리 결과
-    D --> E1[🚨 현장 알람/PLC 제어<br/>(불량품 제거)]
+    D --> E1[🚨 현장 알람/PLC 제어\n(불량품 제거)]
     D --> E2[📊 로컬 로그 DB 저장]
 
     %% 클라우드 연동
@@ -37,3 +37,4 @@ flowchart TD
         G --> H2
         G --> H3
     end
+
