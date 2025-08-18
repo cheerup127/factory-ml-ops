@@ -13,7 +13,7 @@ flowchart TD
     D --> E2[Local Log DB Storage]
 
     %% Cloud Integration
-    E2 --> F[Google Cloud IoT Core / PubSub]
+    E2 --> F[Google Cloud IoT Core RETIRED / PubSub]
     F --> G[Vertex AI Monitoring / Dify Workflow]
 
     %% Team Collaboration
