@@ -7,7 +7,7 @@ flowchart TD
     end
 
     subgraph GCP[" Google Cloud"]
-        B1[ Upload Model to Cloud Storage (GCS)] --> B2[ Vertex AI Model Registry<br/>Register Model]
+        B1[ Upload Model to Cloud Storage GCS] --> B2[ Vertex AI Model Registry<br/>Register Model]
         B2 --> B3[ Vertex AI Endpoint Deploy Model]
         B3 --> B4[ Prediction Service REST / gRPC API]
     end
