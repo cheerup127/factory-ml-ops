@@ -2,7 +2,7 @@
 flowchart TD
 
     subgraph Local[" Local Development"]
-        A1[ Prepare Data train/val/test directories] --> A2[ Train TensorFlow Model EfficientNetB0 (ImageNet pretrained)]
+        A1[ Prepare Data train/val/test directories] --> A2[ Train TensorFlow Model EfficientNetB0 ImageNet pretrained]
         A2 --> A3[ Save Model SavedModel format]
     end
 
